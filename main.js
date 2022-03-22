@@ -1,3 +1,55 @@
+// Bài 1
+function vungUuTien(){
+    var areaA = document.getElementById('areaA');
+    var areaB = document.getElementById('areaB');
+    var areaC = document.getElementById('areaC');
+    var areaX = document.getElementById('areaX');
+    var area;
+    if (areaA.checked){
+        area = 2;
+    } else if (areaB.checked){
+        area = 1;
+    } else if (areaC.checked){
+        area = 0.5;
+    } else if (areaX.checked){
+        area = 0;
+    }
+    return area;
+}
+function doiTuong(){
+    var obj1 = document.getElementById('obj1');
+    var obj2 = document.getElementById('obj2');
+    var obj3 = document.getElementById('obj3');
+    var obj0 = document.getElementById('obj0');
+    var obj;
+    if (obj1.checked){
+        obj = 2.5;
+    } else if (obj2.checked){
+        obj = 1.5;
+    } else if (obj3.checked){
+        obj = 1;
+    } else if (obj0.checked){
+        obj = 0;
+    }
+    return obj;
+}
+function tinhDiem(){
+    var diem1 = document.getElementById('diem1').value * 1;
+    var diem2 = document.getElementById('diem2').value * 1;
+    var diem3 = document.getElementById('diem3').value * 1;
+    var tongDiem = diem1 + diem2 + diem3;
+    return tongDiem;
+}
+function xetTuyen(){
+    var diemChuan = document.getElementById('diemChuan').value * 1;
+    if (tinhDiem() + doiTuong() + vungUuTien() >= diemChuan){
+        var ketQua = "Chúc mừng bạn đã trúng tuyển vào trường của chúng tôi";
+    } else {
+        var ketQua = "Rất tiếc! Bạn chưa đạt đủ điều kiện để vào trường, hẹn gặp lại vào năm sau"
+    }
+    document.getElementById('ketQua').innerHTML = ketQua;
+}
+// Bài 2
 const kwdau = 500;
 const kw50_100 = 650;
 const kw100_200 = 850;
@@ -30,28 +82,4 @@ document.getElementById('btnTinhTienDien').onclick = function () {
     var kq = document.getElementById('outputTinhTienDien');
     kq.innerHTML = 'Ông/Bà ' + name + ' đã tiêu thụ ' + kW + ' kw và số tiền điện phải tra là: ' + total +' đồng';
 }
-// function tinhkw1(kw1){
-//     var kq;
-//     kq = kw1 * 500;
-//     return kq;
-// }
-// function tinhkw2(kw1,kw2){
-//     var kq;
-//     kq = kw1 * 500 + (kw2-50)*650;
-//     return kq;
-// }
-// function tinhkw3(kw1,kw2,kw3){
-//     var kq;
-//     kq = kw1 * 500 + kw2*650 + (kw3-100)*850;
-//     return kq;
-// }
-// function tinhkw4(kw1,kw2,kw3,kw4) {
-//     var kq;
-//     kq = kw1 * 500 + kw2*650 + kw3*850 + (kw4-200) *1100;
-//     return kq;
-// }
-// function tinhkw5(kw1,kw2,kw3,kw4,kw5) {
-//     var kq;
-//     kq = kw1 * 500 + kw2*650 + kw3*850 + kw4 *1100 + (kw5-350)*1300;
-//     return kq;
-// }
+

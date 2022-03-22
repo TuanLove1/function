@@ -12,11 +12,69 @@
   </head>
   <body>
     <div class="all">
+      <h1> Bài 1,Xét điểm tốt nghiệp</h1>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-header">Điểm chuẩn của hội đồng thi</div>
+            <div class="card-body">
+              <input type="number" id="diemChuan" />
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">Điểm từng môn thi được</div>
+            <div class="card-body">
+              Điểm môn thứ 1<input type="number" id="diem1"/><br/>
+              Điểm môn thứ 2<input type="number" id="diem2"/><br/>
+              Điểm môn thứ 3<input type="number" id="diem3"/><br/>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">Khu vực thi</div>
+            <div class="card-body">
+              <ul style="list-style-type: none;">
+                <li>
+                  <input type="radio" name="area" value="0" id="areaX"/>
+                  <label>Khu vực X</label>
+                </li>
+                <li>
+                  <input type="radio" name="area" value="2" id="areaA" />
+                  <label>Khu vực A</label>
+                </li>
+                <li>
+                  <input type="radio" name="area" value="1" id="areaB"/>
+                  <label>Khu vực B</label>
+                </li>
+                <li>
+                  <input type="radio" name="area" value="0.5" id="areaC"/>
+                  <label>Khu vực C</label>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">Đối tượng ưu tiên</div>
+            <div class="card-body">
+              <ul style="list-style-type:none;">
+                <li><input type="radio" id="obj0" name="obj" value="1"><label>Đối tượng 0</label></li>
+                <li><input type="radio" id="obj1" name="obj" value="2.5"><label>Đối tượng 1</label></li>
+                <li><input type="radio" id="obj2" name="obj" value="1.5"><label>Đối tượng 2</label></li>
+                <li><input type="radio" id="obj3" name="obj" value="1"><label>Đối tượng 3</label></li>
+              </ul>
+            </div>
+          </div>
+          <button onclick="xetTuyen()" id="btn" class="btn-success btn-primary btn-lg" style="margin-top:30px; margin-left: 100px;">Xem kết quả</button>
+          <div id="ketQua"></div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="all">
+        <h2>Bài 2,Tính tiền điện</h2>
         <input id="fullname" type="text" value="" placeholder="Nhập tên"><br>
         <input id="kilo" type="text" value="" placeholder="Nhập số điện đã tiêu thụ"><br>
         <button id="btnTinhTienDien" class="btn btn-primary">Thành tiền</button>
         <div id="outputTinhTienDien"></div>
-
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
